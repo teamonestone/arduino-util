@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['md',['md',['../namespacemd.html',1,'']]],
-  ['mdelay',['mdelay',['../mdelay_8h.html#a75785e6ef370141b332f9cd0467568ad',1,'arduino_util::mdelay']]],
+  ['mdelay',['mdelay',['../namespacemdelay.html',1,'mdelay'],['../mdelay_8h.html#a75785e6ef370141b332f9cd0467568ad',1,'arduino_util::mdelay::mdelay()']]],
   ['mdelay_2ecpp',['mdelay.cpp',['../mdelay_8cpp.html',1,'']]],
   ['mdelay_2eh',['mdelay.h',['../mdelay_8h.html',1,'']]],
   ['mdelay_5ff',['mdelay_f',['../mdelay_8h.html#a5229792a1e75068e525cd63ebc88b822',1,'arduino_util::mdelay']]],
