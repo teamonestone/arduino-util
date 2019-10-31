@@ -25,6 +25,7 @@ namespace arduino_util {
 	
 	/**
 	 * @namespace mdelay
+	 * 
 	 * @brief The namespace for all delay functions based on the millis() function.
 	 */
 	namespace mdelay {

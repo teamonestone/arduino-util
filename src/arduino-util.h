@@ -23,6 +23,7 @@
 
 /**
  * @namespace arduino_util
+ * 
  * @brief The main namespace of the Arduino library with useful tools.
  * @details
  * 
