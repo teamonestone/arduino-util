@@ -96,23 +96,27 @@
 
 
 // include
-#include "millis-delay.h"
+#include "mdelay.h"
 
 // namespace
-using namespace arduino_util;
+using namespace arduino_util::mdelay;
 
-bool f(uint64_t) {
+void f (uint32_t) {
+  
+}
+
+bool fc(uint32_t) {
     return true;  
 }
 
 void setup() {
-    md::get_version();
-    md::delay(0);
-    md::micro_delay(0);
-    md::delay_f(0, &f);
-    md::micro_delay_f(0, &f);
-    md::delay_with_condition(0, &f);
-    md::micro_delay_with_condition(0, &f);
+    get_version();
+    mdelay(0);
+    micro_mdelay(0);
+    mdelay_f(0, &f);
+    micro_mdelay_f(0, &f);
+    mdelay_with_condition(0, &fc);
+    micro_mdelay_with_condition(0, &fc);
 }
 
 void loop() {

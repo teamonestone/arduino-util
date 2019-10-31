@@ -1,5 +1,5 @@
 /**
- * @file millis-delay.h
+ * @file mdelay.h
  * @brief The header file of the Arduino library with useful tools.
  * @author Jonas Merkle [JJM] <a href="mailto:jonas.merkle@tam-onestone.net">jonas.merkle@tam-onestone.net</a>
  * @author Dominik Authaler <a href="mailto:dominik.authaler@team-onestone.net">dominik.authaler@team-onestone.net</a>
@@ -11,8 +11,8 @@
  * @copyright This project is released under the GNU General Public License v3.0
  */
 
-#ifndef MILLIES_DELAY_H
-#define MILLIES_DELAY_H
+#ifndef MDELAY_H
+#define MDELAY_H
 
 // includes
 #include <inttypes.h>
@@ -31,15 +31,15 @@ namespace arduino_util {
 	 * @namespace md
 	 * @brief The namespace for all util delay functions based on the millis() function.
 	 */
-	namespace md {
+	namespace mdelay {
 		
 		// functions
-		void delay(uint32_t delay_time);			                    							// Delay based on millis() (milliseconds resolution).
-		void micro_delay(uint32_t delay_time);		                    						// Delay based on micros() (microseconds resolution).
-        void delay_f(uint32_t delay_time, void (*funct)(uint64_t));								// Delay based on millis() with function call during the delay (milliseconds resolution).
-		void micro_delay_f(uint32_t delay_time, void (*funct)(uint64_t));						// Delay based on micros() with function call during the delay  (microseconds resolution).
-		void delay_with_condition(uint32_t delay_time, bool (*condition)(uint64_t));				// Delay based on millis() with additional break condition (milliseconds resolution).
-		void micro_delay_with_condition(uint32_t delay_time, bool (*condition)(uint64_t));		// Delay based on micros() with additional break condition (microseconds resolution).
+		void mdelay(uint32_t delay_time);			                    						// Delay based on millis() (milliseconds resolution).
+		void micro_mdelay(uint32_t delay_time);		                    						// Delay based on micros() (microseconds resolution).
+        void mdelay_f(uint32_t delay_time, void (*funct)(uint32_t));							// Delay based on millis() with function call during the delay (milliseconds resolution).
+		void micro_mdelay_f(uint32_t delay_time, void (*funct)(uint32_t));						// Delay based on micros() with function call during the delay  (microseconds resolution).
+		void mdelay_with_condition(uint32_t delay_time, bool (*condition)(uint32_t));			// Delay based on millis() with additional break condition (milliseconds resolution).
+		void micro_mdelay_with_condition(uint32_t delay_time, bool (*condition)(uint32_t));		// Delay based on micros() with additional break condition (microseconds resolution).
 		
 		uint16_t get_version();             // Get the version of the library.
 	}

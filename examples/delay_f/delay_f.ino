@@ -9,13 +9,13 @@
  */
 
 // include section
-#include "millis-delay.h"
+#include "mdelay.h"
 
 // namespace section
-using namespace arduino_util;
+using namespace arduino_util::mdelay;
 
 // global functions 
-void toTrigger(uint64_t);
+void toTrigger(uint32_t);
 
 // arduino setup routine
 void setup() {
@@ -27,7 +27,7 @@ void loop() {
   Serial.println("Beginning delay");
   
   //Using a function pointer as param for a method is quite simple, the only thing you need to do is writing the name of the method ;)
-  md::delay_f(500, toTrigger);
+  mdelay_f(500, toTrigger);
   
   Serial.println("End of Delay");
 
@@ -41,6 +41,6 @@ void loop() {
  * measures whilst waiting a certain time. To implement this, there will be also the need of a global variable, which saves, when
  * the last measurement was started. The system time can be evaluated by calling millis().
  */
-void toTrigger(uint64_t) {
+void toTrigger(uint32_t) {
     Serial.println("Triggered");
 }

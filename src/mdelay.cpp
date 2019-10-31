@@ -1,5 +1,5 @@
 /**
- * @file millis-delay.cpp
+ * @file mdelay.cpp
  * @brief The source file of the Arduino library with useful tools.
  * @author Jonas Merkle [JJM] <a href="mailto:jonas.merkle@tam-onestone.net">jonas.merkle@tam-onestone.net</a>
  * @author Dominik Authaler <a href="mailto:dominik.authaler@team-onestone.net">dominik.authaler@team-onestone.net</a>
@@ -40,7 +40,7 @@
 /////////////
 // include //
 /////////////
-#include "millis-delay.h"
+#include "mdelay.h"
 
 ///////////////
 // functions //
@@ -51,7 +51,7 @@
  * 
  * @retrun the current version of the library.
  */
-uint16_t arduino_util::md::get_version() {
+uint16_t arduino_util::mdelay::get_version() {
     return _MILLIES_DELAY_LIB_VERSION;
 }
 
@@ -60,8 +60,8 @@ uint16_t arduino_util::md::get_version() {
  * 
  * @param delay_time time to wait in milliseconds.
  */
-void arduino_util::md::delay(uint32_t delay_time) {
-    uint64_t time_to_wait = millis() + delay_time;
+void arduino_util::mdelay::mdelay(uint32_t delay_time) {
+    uint32_t time_to_wait = millis() + delay_time;
 
     while (millis() <= time_to_wait);
 }
@@ -71,8 +71,8 @@ void arduino_util::md::delay(uint32_t delay_time) {
  * 
  * @param delay_time time to wait in microseconds.
  */
-void arduino_util::md::micro_delay(uint32_t delay_time) {
-    uint64_t time_to_wait = micros() + delay_time;
+void arduino_util::mdelay::micro_mdelay(uint32_t delay_time) {
+    uint32_t time_to_wait = micros() + delay_time;
 
     while (micros() <= time_to_wait);
 }
@@ -81,10 +81,10 @@ void arduino_util::md::micro_delay(uint32_t delay_time) {
  * @brief Delay based on millis() with function call during the delay (milliseconds resolution).
  * 
  * @param delay_time time to wait in milliseconds.
- * @param funct function pointer to a void function with a uint64_t argument.
+ * @param funct function pointer to a void function with a uint32_t argument.
  */
-void arduino_util::md::delay_f(uint32_t delay_time, void (*funct)(uint64_t)) {
-    uint64_t time_to_wait = millis() + delay_time;
+void arduino_util::mdelay::mdelay_f(uint32_t delay_time, void (*funct)(uint32_t)) {
+    uint32_t time_to_wait = millis() + delay_time;
 
     while (millis() <= time_to_wait) {
         funct(time_to_wait);
@@ -95,10 +95,10 @@ void arduino_util::md::delay_f(uint32_t delay_time, void (*funct)(uint64_t)) {
  * @brief Delay based on micros() with function call during the delay  (microseconds resolution).
  * 
  * @param delay_time time to wait in microseconds.
- * @param funct function pointer to a void function with a uint64_t argument.
+ * @param funct function pointer to a void function with a uint32_t argument.
  */
-void arduino_util::md::micro_delay_f(uint32_t delay_time, void (*funct)(uint64_t)) {
-    uint64_t time_to_wait = micros() + delay_time;
+void arduino_util::mdelay::micro_mdelay_f(uint32_t delay_time, void (*funct)(uint32_t)) {
+    uint32_t time_to_wait = micros() + delay_time;
 
     while (micros() <= time_to_wait) {
         funct(time_to_wait);
@@ -109,10 +109,10 @@ void arduino_util::md::micro_delay_f(uint32_t delay_time, void (*funct)(uint64_t
  * @brief Delay based on millis() with additional break condition (milliseconds resolution).
  * 
  * @param delay_time time to wait in milliseconds.
- * @param funct function pointer to a bool function with a uint64_t argument.
+ * @param funct function pointer to a bool function with a uint32_t argument.
  */
-void arduino_util::md::delay_with_condition(uint32_t delay_time, bool (*condition)(uint64_t)) {
-    uint64_t time_to_wait = millis() + delay_time;
+void arduino_util::mdelay::mdelay_with_condition(uint32_t delay_time, bool (*condition)(uint32_t)) {
+    uint32_t time_to_wait = millis() + delay_time;
 
     while (millis() <= time_to_wait && condition(time_to_wait));
 }
@@ -121,10 +121,10 @@ void arduino_util::md::delay_with_condition(uint32_t delay_time, bool (*conditio
  * @brief Delay based on micros() with additional break condition (microseconds resolution).
  * 
  * @param delay_time time to wait in microseconds
- * @param funct function pointer to a bool function with a uint64_t argument.
+ * @param funct function pointer to a bool function with a uint32_t argument.
  */
-void arduino_util::md::micro_delay_with_condition(uint32_t _delay_time, bool (*_condition)(uint64_t)) {
-    uint64_t _time_to_wait = micros() + _delay_time;
+void arduino_util::mdelay::micro_mdelay_with_condition(uint32_t _delay_time, bool (*_condition)(uint32_t)) {
+    uint32_t _time_to_wait = micros() + _delay_time;
 
     while (micros() <= _time_to_wait && _condition(_time_to_wait));
 }

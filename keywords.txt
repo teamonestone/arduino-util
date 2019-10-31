@@ -7,18 +7,18 @@
 #######################################
 
 arduino_util	KEYWORD1
-md	KEYWORD1
+mdelay	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-delay	KEYWORD2
-micro_delay	KEYWORD2
-delay_f		KEYWORD2
-micro_delay_f	KEYWORD2
-delay_with_condition	KEYWORD2
-micro_delay_with_condition	KEYWORD2
+mdelay	KEYWORD2
+micro_mdelay	KEYWORD2
+mdelay_f	KEYWORD2
+micro_mdelay_f	KEYWORD2
+mdelay_with_condition	KEYWORD2
+micro_mdelay_with_condition	KEYWORD2
 
 get_version	KEYWORD2
 

@@ -9,7 +9,7 @@
  */
 
 // include section
-#include "millis-delay.h"
+#include "mdelay.h"
 #include <Wire.h>
 
 // define section
@@ -17,7 +17,7 @@
 #define READ_DELAY_US_SENSORS 75        // the time a us sensor takes to do a range meassurement
 
 // namespace section
-using namespace arduino_util;
+using namespace arduino_util::mdelay;
 
 // global values
 uint8_t usSensorAddress[NUMBER_OF_US_SENSORS] = {0};            // the i2c address of the different us sensors
@@ -50,7 +50,7 @@ void setup() {
 // arduino main loop
 void loop() {
 
-    md::delay_f(500, updateUS);
+    mdelay_f(500, updateUS);
 
     for (uint8_t i =  1; i <= NUMBER_OF_US_SENSORS; i++) {
         Serial.print("US-Sensor ");
