@@ -1,6 +1,6 @@
 /**
  * @file mdelay.h
- * @brief The header file of the Arduino library with useful tools.
+ * @brief The header file of the 'mdelay' sub library.
  * @author Jonas Merkle [JJM] <a href="mailto:jonas.merkle@tam-onestone.net">jonas.merkle@tam-onestone.net</a>
  * @author Dominik Authaler <a href="mailto:dominik.authaler@team-onestone.net">dominik.authaler@team-onestone.net</a>
  * @author
@@ -19,17 +19,14 @@
 #include <Arduino.h>
 
 // defines
-#define _MILLIES_DELAY_LIB_VERSION 100	///< The version number of the library.
+#define _MDELAY_LIB_VERSION 100	///< The version number of the library.
 
-/**
- * @namespace arduino_util
- * @brief The main namespace of the Arduino library with useful tools.
- */
 namespace arduino_util {
 	
 	/**
-	 * @namespace md
-	 * @brief The namespace for all util delay functions based on the millis() function.
+	 * @namespace mdelay
+	 * 
+	 * @brief The namespace for all delay functions based on the millis() function.
 	 */
 	namespace mdelay {
 		
