@@ -1,0 +1,34 @@
+{
+  "name": "arduino-util",
+  "keywords": "arduino, util, tools",
+  "description": "Arduino library with useful tools.",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/teamonestone/arduino-util.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Jonas Merkle [JJM]",
+      "email": "jonas.merkle@tam-onestone.net"
+	  "url": "https://jjm.one",
+    },
+    {
+      "name": "Dominik Authaler",
+      "email": "dominik.authaler@tam-onestone.net"
+    },
+    {
+      "name": "Team Onestone",
+      "email": "info@team-onestone.net",
+      "url": "https://team-onestone.net",
+      "maintainer": true
+    }
+  ],
+  "dependencies":
+  {
+  },
+  "version": "1.0.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}

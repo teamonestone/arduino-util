@@ -1,0 +1,31 @@
+#######################################
+# Syntax Coloring Map For ExampleLibrary
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+arduino_util	KEYWORD1
+millis_delay	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+delay	KEYWORD2
+micro_delay	KEYWORD2
+delay_f		KEYWORD2
+micro_delay_f	KEYWORD2
+delay_with_condition	KEYWORD2
+micro_delay_with_condition	KEYWORD2
+
+get_version	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
