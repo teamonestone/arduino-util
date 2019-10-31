@@ -9,7 +9,7 @@
  */
 
 // include section
-#include "millis_delay.h"
+#include "millis-delay.h"
 
 // namespace section
 using namespace arduino_util::millis_delay;

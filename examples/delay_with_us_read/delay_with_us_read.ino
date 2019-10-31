@@ -9,7 +9,7 @@
  */
 
 // include section
-#include "millis_delay.h"
+#include "millis-delay.h"
 #include <Wire.h>
 
 // define section
