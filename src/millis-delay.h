@@ -28,10 +28,10 @@
 namespace arduino_util {
 	
 	/**
-	 * @namespace millis_delay
+	 * @namespace md
 	 * @brief The namespace for all util delay functions based on the millis() function.
 	 */
-	namespace millis_delay {
+	namespace md {
 		
 		// functions
 		static void delay(uint32_t delay_time);			                    							// Delay based on millis() (milliseconds resolution).

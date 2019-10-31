@@ -99,7 +99,7 @@
 #include "millis-delay.h"
 
 // namespace
-using namespace arduino_util::millis_delay;
+using namespace arduino_util;
 
 bool f(uint64_t) {
     return true;  
@@ -107,12 +107,12 @@ bool f(uint64_t) {
 
 void setup() {
 	get_version();
-    delay(0);
-    micro_delay(0);
-    delay_f(0, &f);
-    micro_delay_f(0, &f);
-    delay_with_condition(0, &f);
-    micro_delay_with_condition(0, &f);
+    md::delay(0);
+    md::micro_delay(0);
+    md::delay_f(0, &f);
+    md::micro_delay_f(0, &f);
+    md::delay_with_condition(0, &f);
+    md::micro_delay_with_condition(0, &f);
 }
 
 void loop() {

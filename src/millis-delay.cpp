@@ -51,7 +51,7 @@
  * 
  * @retrun the current version of the library.
  */
-uint16_t arduino_util::millis_delay::get_version() {
+uint16_t arduino_util::md::get_version() {
     return _MILLIES_DELAY_LIB_VERSION;
 }
 
@@ -60,7 +60,7 @@ uint16_t arduino_util::millis_delay::get_version() {
  * 
  * @param delay_time time to wait in milliseconds.
  */
-void arduino_util::millis_delay::delay(uint32_t delay_time) {
+void arduino_util::md::delay(uint32_t delay_time) {
     uint64_t time_to_wait = millis() + delay_time;
 
     while (millis() <= time_to_wait);
@@ -71,7 +71,7 @@ void arduino_util::millis_delay::delay(uint32_t delay_time) {
  * 
  * @param delay_time time to wait in microseconds.
  */
-void arduino_util::millis_delay::micro_delay(uint32_t delay_time) {
+void arduino_util::md::micro_delay(uint32_t delay_time) {
     uint64_t time_to_wait = micros() + delay_time;
 
     while (micros() <= time_to_wait);
@@ -83,7 +83,7 @@ void arduino_util::millis_delay::micro_delay(uint32_t delay_time) {
  * @param delay_time time to wait in milliseconds.
  * @param funct function pointer to a void function with a uint64_t argument.
  */
-void arduino_util::millis_delay::delay_f(uint32_t delay_time, void (*funct)(uint64_t)) {
+void arduino_util::md::delay_f(uint32_t delay_time, void (*funct)(uint64_t)) {
     uint64_t time_to_wait = millis() + delay_time;
 
     while (millis() <= time_to_wait) {
@@ -97,7 +97,7 @@ void arduino_util::millis_delay::delay_f(uint32_t delay_time, void (*funct)(uint
  * @param delay_time time to wait in microseconds.
  * @param funct function pointer to a void function with a uint64_t argument.
  */
-void arduino_util::millis_delay::micro_delay_f(uint32_t delay_time, void (*funct)(uint64_t)) {
+void arduino_util::md::micro_delay_f(uint32_t delay_time, void (*funct)(uint64_t)) {
     uint64_t time_to_wait = micros() + delay_time;
 
     while (micros() <= time_to_wait) {
@@ -111,7 +111,7 @@ void arduino_util::millis_delay::micro_delay_f(uint32_t delay_time, void (*funct
  * @param delay_time time to wait in milliseconds.
  * @param funct function pointer to a bool function with a uint64_t argument.
  */
-void arduino_util::millis_delay::delay_with_condition(uint32_t delay_time, bool (*condition)(uint64_t)) {
+void arduino_util::md::delay_with_condition(uint32_t delay_time, bool (*condition)(uint64_t)) {
     uint64_t time_to_wait = millis() + delay_time;
 
     while (millis() <= time_to_wait && condition(time_to_wait));
@@ -123,7 +123,7 @@ void arduino_util::millis_delay::delay_with_condition(uint32_t delay_time, bool 
  * @param delay_time time to wait in microseconds
  * @param funct function pointer to a bool function with a uint64_t argument.
  */
-void arduino_util::millis_delay::micro_delay_with_condition(uint32_t _delay_time, bool (*_condition)(uint64_t)) {
+void arduino_util::md::micro_delay_with_condition(uint32_t _delay_time, bool (*_condition)(uint64_t)) {
     uint64_t _time_to_wait = micros() + _delay_time;
 
     while (micros() <= _time_to_wait && _condition(_time_to_wait));
