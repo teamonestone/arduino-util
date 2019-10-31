@@ -21,12 +21,12 @@ using namespace arduino_util::mdelay;
 
 // global values
 uint8_t usSensorAddress[NUMBER_OF_US_SENSORS] = {0};            // the i2c address of the different us sensors
-uint64_t timeOfLastUsRead[NUMBER_OF_US_SENSORS] = {0};          // the time at which the us sensor startet the measurement
+uint32_t timeOfLastUsRead[NUMBER_OF_US_SENSORS] = {0};          // the time at which the us sensor startet the measurement
 int16_t distanceValueOfUsSeonsors[NUMBER_OF_US_SENSORS] = {0};  // the last meassured distance of an us sensor in cm
 bool usSensorIsReadyToMeassure[NUMBER_OF_US_SENSORS] = {0};
 
 // global functions 
-void updateUS(uint64_t);        // try to update all us sensors
+void updateUS(uint32_t);        // try to update all us sensors
 void initUS();                  // initialize the us sensors
 int16_t getUsValue(uint8_t);    // return the value of an us sensor
 
@@ -72,7 +72,7 @@ int16_t getUsValue(uint8_t usSensorNumber) {
         return distanceValueOfUsSeonsors[usSensorNumber-1];
 }
 
-void updateUS(uint64_t endTimeOfDelay) {
+void updateUS(uint32_t endTimeOfDelay) {
     // check if a measurement needs to be startet
     for (uint8_t i = 0; i < NUMBER_OF_US_SENSORS; i++) {
         if (usSensorIsReadyToMeassure[i]) {
