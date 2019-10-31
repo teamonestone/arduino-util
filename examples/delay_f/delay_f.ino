@@ -12,7 +12,7 @@
 #include "millis-delay.h"
 
 // namespace section
-using namespace arduino_util::millis_delay;
+using namespace arduino_util;
 
 // global functions 
 void toTrigger(uint64_t);
@@ -27,7 +27,7 @@ void loop() {
   Serial.println("Beginning delay");
   
   //Using a function pointer as param for a method is quite simple, the only thing you need to do is writing the name of the method ;)
-  bot.delay_f(500, toTrigger);
+  md::delay_f(500, toTrigger);
   
   Serial.println("End of Delay");
 
@@ -44,4 +44,3 @@ void loop() {
 void toTrigger(uint64_t) {
     Serial.println("Triggered");
 }
-

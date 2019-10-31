@@ -34,14 +34,14 @@ namespace arduino_util {
 	namespace md {
 		
 		// functions
-		static void delay(uint32_t delay_time);			                    							// Delay based on millis() (milliseconds resolution).
-		static void micro_delay(uint32_t delay_time);		                    						// Delay based on micros() (microseconds resolution).
-        static void delay_f(uint32_t delay_time, void (*funct)(uint64_t));								// Delay based on millis() with function call during the delay (milliseconds resolution).
-		static void micro_delay_f(uint32_t delay_time, void (*funct)(uint64_t));						// Delay based on micros() with function call during the delay  (microseconds resolution).
-		static void delay_with_condition(uint32_t delay_time, bool (*condition)(uint64_t));				// Delay based on millis() with additional break condition (milliseconds resolution).
-		static void micro_delay_with_condition(uint32_t delay_time, bool (*condition)(uint64_t));		// Delay based on micros() with additional break condition (microseconds resolution).
+		void delay(uint32_t delay_time);			                    							// Delay based on millis() (milliseconds resolution).
+		void micro_delay(uint32_t delay_time);		                    						// Delay based on micros() (microseconds resolution).
+        void delay_f(uint32_t delay_time, void (*funct)(uint64_t));								// Delay based on millis() with function call during the delay (milliseconds resolution).
+		void micro_delay_f(uint32_t delay_time, void (*funct)(uint64_t));						// Delay based on micros() with function call during the delay  (microseconds resolution).
+		void delay_with_condition(uint32_t delay_time, bool (*condition)(uint64_t));				// Delay based on millis() with additional break condition (milliseconds resolution).
+		void micro_delay_with_condition(uint32_t delay_time, bool (*condition)(uint64_t));		// Delay based on micros() with additional break condition (microseconds resolution).
 		
-		static uint16_t get_version();             // Get the version of the library.
+		uint16_t get_version();             // Get the version of the library.
 	}
 }
 

@@ -106,7 +106,7 @@ bool f(uint64_t) {
 }
 
 void setup() {
-	get_version();
+    md::get_version();
     md::delay(0);
     md::micro_delay(0);
     md::delay_f(0, &f);
