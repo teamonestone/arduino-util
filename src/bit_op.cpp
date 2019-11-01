@@ -1,5 +1,5 @@
 /**
- * @file mdelay.cpp
+ * @file bit_op.cpp
  * @brief The source file of the bit_op sub library.
  * @author Jonas Merkle [JJM] <a href="mailto:jonas.merkle@tam-onestone.net">jonas.merkle@tam-onestone.net</a>
  * @author Dominik Authaler <a href="mailto:dominik.authaler@team-onestone.net">dominik.authaler@team-onestone.net</a>
@@ -32,24 +32,32 @@ uint16_t arduino_util::bit_op::get_version() {
 /**
  * @brief Convert a float value to a byte array.
  * 
- * @param input The input as float.
- * @retrun The corresponding byte array.
+ * @param input The input as float (pointer).
+ * @param output The output as byte array (pointer). 
+ * @retrun True on succes, else fals.
  */
-uint8_t* arduino_util::bit_op::convFloatToBytes(float input) {
-    uint8_t res[4] = {0};
-    std::memcpy(res, &input, 4);
-    return res;
+bool arduino_util::bit_op::convFloatToBytes(float *input, uint8_t output[4]) {
+    if (memcpy(output, input, 4) != nullptr) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 /**
  * @brief Convert a byte array to a floar value.
  * 
- * @param input The input as byte array.
- * @retrun The corresponding float value.
+ * @param input The input as byte array (pointer).
+ * @param output The output as float (pointer).
+ * @retrun True on succes, else fals.
  */
-float arduino_util::bit_op::convertBytesTofloat(uint8_t input[4]) {
-    float res = 0;
-    std::memcpy(&res, input, 4);
-    return res;
+bool arduino_util::bit_op::convBytesTofloat(uint8_t input[4], float *output) {
+    if (memcpy(output, input, 4) != nullptr) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 

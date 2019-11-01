@@ -16,7 +16,7 @@
 
 // includes
 #include <inttypes.h>
-#include <cstring>
+#include <string.h>
 
 // defines
 #define _BIT_OP_LIB_VERSION 100	///< The version number of the library.
@@ -30,11 +30,10 @@ namespace arduino_util {
 	namespace bit_op {
 		
 		// functions
-        uint8_t* convFloatToBytes(float input);           // convert a float value to a byte array.
-        float convertBytesTofloat(uint8_t input[4]);        // convert a byte array to a floar value. 
+        bool convFloatToBytes(float *input, uint8_t output[4]);		// convert a float value to a byte array.
+    	bool convBytesTofloat(uint8_t input[4], float *output);		// convert a byte array to a floar value. 
 
-
-		uint16_t get_version();             // Get the version of the library.
+		uint16_t get_version();							// Get the version of the library.
 	}
 }
 
