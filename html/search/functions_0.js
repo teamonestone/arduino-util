@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['get_5fversion',['get_version',['../namespacearduino__util.html#a1b4d2c8304d94c4deadb6c7eaaba998b',1,'arduino_util::get_version()'],['../mdelay_8h.html#a1bd89c2127cb3117192d77e74d35e0fa',1,'arduino_util::mdelay::get_version()']]]
+  ['convbytestofloat',['convBytesTofloat',['../bit__op_8h.html#acf56fcbc114b67e0c9d5bc17f070db08',1,'arduino_util::bit_op']]],
+  ['convfloattobytes',['convFloatToBytes',['../bit__op_8h.html#ab875d4e69cfb0e5bd48e759c375d480a',1,'arduino_util::bit_op']]]
 ];
