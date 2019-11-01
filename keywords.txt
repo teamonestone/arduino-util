@@ -8,6 +8,7 @@
 
 arduino_util	KEYWORD1
 mdelay	KEYWORD1
+bit_op	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -19,6 +20,9 @@ mdelay_f	KEYWORD2
 micro_mdelay_f	KEYWORD2
 mdelay_with_condition	KEYWORD2
 micro_mdelay_with_condition	KEYWORD2
+
+convFloatToBytes	KEYWORD2
+convBytesTofloat	KEYWORD2
 
 get_version	KEYWORD2
 

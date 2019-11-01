@@ -97,26 +97,36 @@
 
 // include
 #include "mdelay.h"
+#include "bit_op.h"
 
 // namespace
-using namespace arduino_util::mdelay;
+using namespace arduino_util;
 
 void f (uint32_t) {
-  
+    ;
 }
 
 bool fc(uint32_t) {
     return true;  
 }
 
+float a = 0.0;
+uint8_t b[4] = {0};
+
 void setup() {
-    get_version();
-    mdelay(0);
-    micro_mdelay(0);
-    mdelay_f(0, &f);
-    micro_mdelay_f(0, &f);
-    mdelay_with_condition(0, &fc);
-    micro_mdelay_with_condition(0, &fc);
+    // mdelay.h
+    mdelay::get_version();
+    mdelay::mdelay(0);
+    mdelay::micro_mdelay(0);
+    mdelay::mdelay_f(0, &f);
+    mdelay::micro_mdelay_f(0, &f);
+    mdelay::mdelay_with_condition(0, &fc);
+    mdelay::micro_mdelay_with_condition(0, &fc);
+
+    //bit_op.h
+    bit_op::get_version();
+    bit_op::convFloatToBytes(&a, b);
+    bit_op::convBytesTofloat(b, &a);   
 }
 
 void loop() {
