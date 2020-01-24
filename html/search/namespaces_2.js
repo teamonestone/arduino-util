@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mdelay',['mdelay',['../namespacemdelay.html',1,'']]]
+  ['millis_5fdelay',['millis_delay',['../namespacemillis__delay.html',1,'']]]
 ];
