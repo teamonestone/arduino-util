@@ -115,7 +115,7 @@ uint8_t b[4] = {0};
 
 void setup() {
     // mdelay.h
-    millis_delay::get_version();
+    millis_delay::getVersion();
     millis_delay::mdelay(0);
     millis_delay::micro_mdelay(0);
     millis_delay::mdelay_f(0, &f);
@@ -124,7 +124,7 @@ void setup() {
     millis_delay::micro_mdelay_with_condition(0, &fc);
 
     //bit_op.h
-    bit_op::get_version();
+    bit_op::getVersion();
     bit_op::convFloatToBytes(&a, b);
     bit_op::convBytesTofloat(b, &a);   
 }

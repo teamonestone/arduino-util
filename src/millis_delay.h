@@ -6,7 +6,7 @@
  * @author
  * This library is maintained by <a href="https://team-onestone.net">Team Onestone</a>.
  * E-Mail: <a href="mailto:info@team-onestone.net">info@team-onestone.net</a>
- * @version 1.0.0
+ * @version 1.1.0
  * @date 31 October 2019
  * @copyright This project is released under the GNU General Public License v3.0
  */
@@ -19,7 +19,7 @@
 #include <Arduino.h>
 
 // defines
-#define _MDELAY_LIB_VERSION 100	///< The version number of the library.
+#define _MDELAY_LIB_VERSION 10100	///< The version number of the library.
 
 namespace arduino_util {
 	
@@ -38,7 +38,7 @@ namespace arduino_util {
 		void mdelay_with_condition(uint32_t delay_time, bool (*condition)(uint32_t));			// Delay based on millis() with additional break condition (milliseconds resolution).
 		void micro_mdelay_with_condition(uint32_t delay_time, bool (*condition)(uint32_t));		// Delay based on micros() with additional break condition (microseconds resolution).
 		
-		uint16_t get_version();             // Get the version of the library.
+		uint16_t getVersion();             // Get the version of the library.
 	}
 }
 

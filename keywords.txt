@@ -24,7 +24,7 @@ micro_mdelay_with_condition	KEYWORD2
 convFloatToBytes	KEYWORD2
 convBytesTofloat	KEYWORD2
 
-get_version	KEYWORD2
+getVersion	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
