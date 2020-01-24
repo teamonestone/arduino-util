@@ -96,7 +96,7 @@
 
 
 // include
-#include "mdelay.h"
+#include "millis_delay.h"
 #include "bit_op.h"
 
 // namespace
@@ -115,13 +115,13 @@ uint8_t b[4] = {0};
 
 void setup() {
     // mdelay.h
-    mdelay::get_version();
-    mdelay::mdelay(0);
-    mdelay::micro_mdelay(0);
-    mdelay::mdelay_f(0, &f);
-    mdelay::micro_mdelay_f(0, &f);
-    mdelay::mdelay_with_condition(0, &fc);
-    mdelay::micro_mdelay_with_condition(0, &fc);
+    millis_delay::get_version();
+    millis_delay::mdelay(0);
+    millis_delay::micro_mdelay(0);
+    millis_delay::mdelay_f(0, &f);
+    millis_delay::micro_mdelay_f(0, &f);
+    millis_delay::mdelay_with_condition(0, &fc);
+    millis_delay::micro_mdelay_with_condition(0, &fc);
 
     //bit_op.h
     bit_op::get_version();

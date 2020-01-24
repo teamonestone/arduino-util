@@ -9,10 +9,10 @@
  */
 
 // include section
-#include "mdelay.h"
+#include "millis_delay.h"
 
 // namespace section
-using namespace arduino_util::mdelay;
+using namespace arduino_util::millis_delay;
 
 // global functions 
 void toTrigger(uint32_t);

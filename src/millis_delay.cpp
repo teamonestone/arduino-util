@@ -1,5 +1,5 @@
 /**
- * @file mdelay.cpp
+ * @file millis_delay.cpp
  * @brief The source file of the 'mdelay' sub library.
  * @author Jonas Merkle [JJM] <a href="mailto:jonas.merkle@tam-onestone.net">jonas.merkle@tam-onestone.net</a>
  * @author Dominik Authaler <a href="mailto:dominik.authaler@team-onestone.net">dominik.authaler@team-onestone.net</a>
@@ -14,7 +14,7 @@
 /////////////
 // include //
 /////////////
-#include "mdelay.h"
+#include "millis_delay.h"
 
 ///////////////
 // functions //
