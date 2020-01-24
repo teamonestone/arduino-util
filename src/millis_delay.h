@@ -1,5 +1,5 @@
 /**
- * @file mdelay.h
+ * @file millis_delay.h
  * @brief The header file of the 'mdelay' sub library.
  * @author Jonas Merkle [JJM] <a href="mailto:jonas.merkle@tam-onestone.net">jonas.merkle@tam-onestone.net</a>
  * @author Dominik Authaler <a href="mailto:dominik.authaler@team-onestone.net">dominik.authaler@team-onestone.net</a>
@@ -24,11 +24,11 @@
 namespace arduino_util {
 	
 	/**
-	 * @namespace mdelay
+	 * @namespace millis_delay
 	 * 
 	 * @brief The namespace for all delay functions based on the millis() function.
 	 */
-	namespace mdelay {
+	namespace millis_delay {
 		
 		// functions
 		void mdelay(uint32_t delay_time);			                    						// Delay based on millis() (milliseconds resolution).
