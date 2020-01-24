@@ -6,7 +6,7 @@
  * @author
  * This library is maintained by <a href="https://team-onestone.net">Team Onestone</a>.
  * E-Mail: <a href="mailto:info@team-onestone.net">info@team-onestone.net</a>
- * @version 1.0.0
+ * @version 1.1.0
  * @date 31 October 2019
  * @copyright This project is released under the GNU General Public License v3.0
  */
@@ -19,7 +19,7 @@
 #include <string.h>
 
 // defines
-#define _BIT_OP_LIB_VERSION 100	///< The version number of the library.
+#define _BIT_OP_LIB_VERSION 10100	///< The version number of the library.
 
 namespace arduino_util {
 	
@@ -33,7 +33,7 @@ namespace arduino_util {
         bool convFloatToBytes(float *input, uint8_t output[4]);		// convert a float value to a byte array.
     	bool convBytesTofloat(uint8_t input[4], float *output);		// convert a byte array to a floar value. 
 
-		uint16_t get_version();							// Get the version of the library.
+		uint16_t getVersion();							// Get the version of the library.
 	}
 }
 
